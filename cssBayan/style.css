@@ -66,3 +66,7 @@ transition: 2s;
     display: block;
     transition: 2s;
 }
+img {
+    width: 20rem;
+    height: 20rem;
+  }
