@@ -2,58 +2,67 @@ body {
 line-height: 1.5;
 font-family: Arial, sans-serif;
 background-color: #FFDAB9;
-font-size: 16px;
+font-size: 1rem;
 color: blue;
 }
 
 *:before,
 *:after {
     box-sizing: border-box;
+    transition: 1s;
+}
+h1 {
+    color: black;
 }
 .accordeon {
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 31.25rem;
+    margin: 1.25rem auto;
 }
 .accordeon:hover {
     color: black;
     cursor: pointer;
+    transition: 2s;
 }
 .acc-item {
-    border-top: 1px solid #A9A9A9;
+    border-top: 0.0625rem solid #A9A9A9;
 }
 .acc-title {
     display: block;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     position: relative;
 }
 .acc-title:after{
     content: "";
     display: block;
     border-style: solid;
-    border-width: 0 7.5px 15px 7.5px;
-    border-color: transparent transparent #007bff transparent;
+    border-width: 0 0.4688rem 0.9375rem 0.4688rem;
+    border-color: transparent transparent black transparent;
 
     position: absolute;
     top:50%;
-    right: 15px;
-    transform: translateY(-50%)
+    right: 0.9375rem;
+    transform: translateY(-50%);
+    transition: 2s;
 }
 .acc-input {
     appearance: none;
 }
 .acc-input:checked ~ .acc-title:after {
 border-style: solid;
-border-width: 15px 7.5px 0 7.5px;
-border-color: #005eff transparent transparent transparent;
-}
-.acc-input:checked ~ .acc-content {
-    display: block;
-}
-.acc-input:hover ~ .acc-content {
-    display: block;
+border-width: 0.9375rem 0.4688rem 0 0.4688rem;
+border-color: black transparent transparent transparent;
+transition: 2s;
 }
 .acc-content {
     display: none;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     text-align: center;
+}
+.acc-input:checked ~ .acc-content {
+    display: block;
+    transition: 2s;
+}
+.acc-input:hover ~ .acc-content {
+    display: block;
+    transition: 2s;
 }
